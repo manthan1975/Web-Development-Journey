@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    color: red;
+    margin: 10px 70px;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right button {
+
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.right select {
+    width: 8vw;
+    height: 4vh;
+    color: white;
+    text-align: center;
+    background-color: rgb(94, 94, 94);
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* ✅ Ye overlay hai */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* black with 60% transparency */
+    z-index: 1;
+}
+
+.hero .content {
+    margin: 0 auto;
+    padding: 0 20px;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero .content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hero .content h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.input-wrapper input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid gray;
+    background-color: #000;
+    outline: none;
+    border-radius: 4px;
+}
+
+.input-wrapper button {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.row {
+    padding: 20px;
+    margin-left: 70px;
+}
+
+.poster {
+    display: flex;
+    gap: 60px;
+}
+
+.movie-card {
+    position: relative;
+}
+
+.movie-card img {
+    width: 150px;
+    height: 35vh;
+    border-radius: 4px;
+}
+
+.number-overlay {
+    position: absolute;
+    top: 165px;
+    left: -20px;
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+    z-index: 1;
+    -webkit-text-stroke: 2px black;
+    line-height: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    line-height: 4;
+}
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.items {
+    height: 30vh;
+    line-height: 1.9;
+    background-color: #24243e;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.svg-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 4px;
+
+}
+
+.info h2 {
+    margin-left: 68px;
+    font-size: 25px;
+    line-height: 2.5;
+}
+
+.info .faq-que {
+    width: 90%;
+    height: 10vh;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    text-align: left;
+    padding: 1.5rem;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.faq-que {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-ans {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.again h4 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: revert;
+}
+
+.fold {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.fold input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid gray;
+    background-color: #000;
+    color: white;
+    outline: none;
+    border-radius: 4px;
+}
+
+.fold button {
+    background-color: #e50914;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.aakhri a {
+    color: #999;
+    text-decoration: underline;
+    font-size: 14px;
+    margin-left: 70px;
+    line-height: 6;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 items per row */
+    gap: 10px;
+    max-width: 1470px;
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.footer a {
+    color: #999;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.left select {
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 7vw;
+    height: 4vh;
+    color: white;
+    text-align: center;
+    background-color: rgb(94, 94, 94);
+    border: none;
+}
+
+.final h5 {
+    margin-left: 70px;
+    margin-top: 30px;
+    color: #999;
+}
+
+.final p {
+    margin-left: 70px;
+    margin-top: 30px;
+    color: #999;
+}
+
+.final p a {
+    color: rgb(68, 142, 244);
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  .right select,
+  .left select {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .hero .content h1 {
+    font-size: 2rem;
+  }
+
+  .hero .content h4,
+  .again h4 {
+    font-size: 1rem;
+  }
+
+  .input-wrapper,
+  .fold {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .input-wrapper input,
+  .fold input,
+  .input-wrapper button,
+  .fold button {
+    width: 100%;
+  }
+
+  .poster {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .movie-card img {
+    width: 100px;
+    height: auto;
+  }
+
+  .number-overlay {
+    font-size: 60px;
+    top: 120px;
+  }
+
+  .items-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info h2 {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .faq-que {
+    font-size: 16px;
+    padding: 1rem;
+  }
+
+  .aakhri a,
+  .final h5,
+  .final p {
+    margin-left: 10px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .logo {
+    font-size: 40px;
+    margin: 10px 30px;
+  }
+
+  .right select,
+  .left select {
+    width: 20vw;
+  }
+
+  .hero .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .input-wrapper input,
+  .fold input {
+    width: 250px;
+  }
+
+  .poster {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .movie-card img {
+    width: 120px;
+  }
+
+  .number-overlay {
+    font-size: 80px;
+    top: 140px;
+  }
+
+  .items-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 901px) {
+  .items-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
